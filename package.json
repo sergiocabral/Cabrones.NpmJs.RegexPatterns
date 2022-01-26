@@ -1,6 +1,6 @@
 {
-  "name": "cabrones.npmjs.regexpatterns",
-  "version": "1.0.0",
+  "name": "@sergiocabral/regex",
+  "version": "0.0.0",
   "description": "",
   "main": "js/index.js",
   "types": "js/index.d.ts",
@@ -8,11 +8,14 @@
     "js/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run format && npm run lint && npm run test",
     "start": "ts-node ts/index.ts",
     "test": "jest",
     "format": "prettier --write ts/**/*.ts test/**/*.ts js/**/*.ts",
-    "lint": "eslint ts/**/*"
+    "lint": "eslint ts/**/*",
+    "prepare": "npm run build",
+    "version": "npm run prepare && git add --all",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
