@@ -14,3 +14,5 @@ if (patterns[process.argv[2]]) {
 } else {
     console.info(`Use um dos nomes da lista de padrões regex: ${Object.keys(patterns).join(', ')}`);
 }
+
+exports.default = patterns;
