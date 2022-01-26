@@ -1,17 +1,12 @@
 import pattern from '../ts';
 
 describe('Arquivos index.ts.', () => {
-
     test('Verificar presença das expressões regulares', () => {
         // Arrange, Given
 
-        var expectedRegExpNames = [
-            "cpf",
-            "cnpj"
-        ];
+        var expectedRegExpNames = ['cpf', 'cnpj'];
 
         for (const expectedRegExpName of expectedRegExpNames) {
-
             // Act, When
 
             var receivedRegExp = pattern[expectedRegExpName];
@@ -28,11 +23,11 @@ describe('Arquivos index.ts.', () => {
     test('Teste para: cpf', () => {
         // Arrange, Given
 
-        var regexp = pattern["cpf"];
+        var regexp = pattern['cpf'];
 
         var expectedResults: Record<string, boolean> = {
-            "123.465.789-00": true,
-            "abc": false,
+            '123.465.789-00': true,
+            abc: false
         };
 
         for (const text in expectedResults) {
@@ -51,11 +46,11 @@ describe('Arquivos index.ts.', () => {
     test('Teste para: cnpj', () => {
         // Arrange, Given
 
-        var regexp = pattern["cnpj"];
+        var regexp = pattern['cnpj'];
 
         var expectedResults: Record<string, boolean> = {
-            "12.345.678/0000-99": true,
-            "abc": false,
+            '12.345.678/0000-99': true,
+            abc: false
         };
 
         for (const text in expectedResults) {
@@ -70,5 +65,4 @@ describe('Arquivos index.ts.', () => {
             expect(receivedResult).toBe(expectedResult);
         }
     });
-
 });
