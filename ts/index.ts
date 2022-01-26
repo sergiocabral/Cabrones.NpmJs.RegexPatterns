@@ -1,4 +1,4 @@
-const patterns = {
+const patterns: Record<string, RegExp> = {
     "cpf": /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
     "cnpj": /^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/,
 }
@@ -15,4 +15,4 @@ if (patterns[process.argv[2]]) {
     console.info(`Use um dos nomes da lista de padrões regex: ${Object.keys(patterns).join(', ')}`);
 }
 
-exports.default = patterns;
+export { patterns as default };
