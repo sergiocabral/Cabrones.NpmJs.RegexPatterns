@@ -8,7 +8,8 @@
     "js/**/*"
   ],
   "scripts": {
-    "start": "tsc && node js/index.js"
+    "build": "tsc",
+    "start": "ts-node ts/index.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/sergiocabral/Cabrones.NpmJs.RegexPatterns#readme",
   "devDependencies": {
     "@types/node": "^17.0.16",
+    "ts-node": "^10.5.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"
   }
