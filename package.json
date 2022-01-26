@@ -2,9 +2,13 @@
   "name": "cabrones.npmjs.regexpatterns",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/index.js",
+  "types": "js/index.d.ts",
+  "files": [
+    "js/**/*"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "start": "tsc && node js/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/sergiocabral/Cabrones.NpmJs.RegexPatterns/issues"
   },
-  "homepage": "https://github.com/sergiocabral/Cabrones.NpmJs.RegexPatterns#readme"
+  "homepage": "https://github.com/sergiocabral/Cabrones.NpmJs.RegexPatterns#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.16",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  }
 }
