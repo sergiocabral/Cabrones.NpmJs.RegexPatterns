@@ -1,6 +1,6 @@
 {
   "name": "@sergiocabral/regex",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "bin": "js/index.js",
   "main": "js/index.js",
